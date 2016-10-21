@@ -7,8 +7,8 @@ let snoopy: Dog = new Snoopy()
 var snoopy = new Snoopy()
 ```
 
-Like in Swift, `let` is peach is the javascript `const`, and `var` is the javascript `let`. There is no consensus of the javascript `var`.
-Variable types can be implicitly defined like in the example `let snoopy: Dog` or type inferred like `var snoopy = new Snoopy()`.
+Like in Swift, `let` is Peach is the javascript `const`, and `var` is the javascript `let`. There is no consensus of the javascript `var`.
+Variable types can be explicitly defined like in the example `let snoopy: Dog` or type inferred like `var snoopy = new Snoopy()`.
 
 ## Primitive Data Types
 
@@ -103,7 +103,7 @@ There is no arrow functions. Instead of ES6 arrow functions, regular functions w
 ## Async
 
 ```
-async function() {
+async function() -> Void {
   let foo = await someAsyncFunction()
   console.log("At this point, foo is assigned a value")
 }
