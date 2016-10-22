@@ -86,26 +86,75 @@ func add(a: Int, b: Int) -> Int {
 
 ```
 func greet() -> Void {
-    print("Hello!")
+    print(`Hello!`)
 }
 ```
 
-## Anonymous functions
+```
+func yell() {
+    print(`HELLO!`)
+}
+```
+
+Void return type is optional to write.
+
+#### Anonymous functions
 
 ```
-let doSomething = function() -> void {
-	print("Do something")
+let doSomething = function() {
+	print(`Do something`)
 }
 ```
 
 There is no arrow functions. Instead of ES6 arrow functions, regular functions will be scoped like arrow functions.
 
-## Async
+#### Async functions
 
 ```
-async function() -> Void {
+async function() {
   let foo = await someAsyncFunction()
-  console.log("At this point, foo is assigned a value")
+  console.log(`At this point, foo is assigned a value`)
 }
 ```
+
+Async fucntions work the same as ES7 async.
+
+## Classes
+
+```
+class HighClass {
+	let a: Int
+	let b: Int
+	
+	constructor(a: Int, b: Int) {
+		self.a = a
+		self.b = b
+	}
+
+	func getA() -> Int {
+		return a
+	}
+
+	func getB() -> Int {
+		return b
+	}
+}
+```
+
+There is no inheritence in Peach.
+
+## Javascript Object
+
+```
+let object = {
+	type: "A", 
+	size: "200", 
+	color: "white"
+}
+
+assert(object.color == `white`)
+```
+
+Javscript objects are directly compatible in Peach.
+
 
