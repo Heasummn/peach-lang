@@ -1,9 +1,8 @@
-import sys
 from antlr4 import *
 from antlr4.InputStream import InputStream
-from peach_lang.parser.PeachLangLexer import PeachLangLexer
-from peach_lang.parser.PeachLangParser import PeachLangParser
-from peach_lang.peach_visitor import PeachVisitor
+from parser.PeachLangLexer import PeachLangLexer
+from parser.PeachLangParser import PeachLangParser
+from peach_visitor import PeachVisitor
 
 def main():
     prog = ""

@@ -1,11 +1,9 @@
 # This is a temporary file, only used to serve an example of an ANTLR grammar
 
-from .parser.PeachLangVisitor import PeachLangVisitor
-from .parser.PeachLangParser import PeachLangParser
+from parser.PeachLangVisitor import PeachLangVisitor
+from parser.PeachLangParser import PeachLangParser
 
 class PeachVisitor(PeachLangVisitor):
-    def __init__(self):
-        super()
 
     def visitEmpty(self, ctx:PeachLangParser.EmptyContext):
         return 0
