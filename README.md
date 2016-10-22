@@ -158,3 +158,10 @@ assert(object.color == `white`)
 Javscript objects are directly compatible in Peach.
 
 
+## Compilation
+PeachLang is pretty small right now, but to get the current code up and running, install the requirements.txt and run `python3 peach_lang/main.py`
+
+## Development
+To develop the parser, use antlr4 upon the `peach_lang/PeachLang.g4` file.
+Make sure that the output directory is set to `peach_lang/parser`, and that you only build a visitor.
+I recommend using an IDE such as PyCharm and the Antlr4 plugin to handle development.
