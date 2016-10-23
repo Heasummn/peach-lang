@@ -2,7 +2,7 @@ from antlr4 import *
 from antlr4.InputStream import InputStream
 from parser.PeachLangLexer import PeachLangLexer
 from parser.PeachLangParser import PeachLangParser
-from peach_visitor import PeachVisitor
+from AstTransform import Transformer
 
 def main():
     prog = ""
@@ -18,8 +18,10 @@ def main():
     parser = PeachLangParser(tokens)
     tree = parser.prog()
 
-    visitor = PeachVisitor()
-    visitor.visit(tree)
+    transformer = Transformer()
+    ast = transformer.visit(tree)
+
+    print(ast)
 
 if __name__ == "__main__":
     main()

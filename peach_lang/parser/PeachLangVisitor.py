@@ -24,8 +24,33 @@ class PeachLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PeachLangParser#addSub.
-    def visitAddSub(self, ctx:PeachLangParser.AddSubContext):
+    # Visit a parse tree produced by PeachLangParser#add.
+    def visitAdd(self, ctx:PeachLangParser.AddContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PeachLangParser#sub.
+    def visitSub(self, ctx:PeachLangParser.SubContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PeachLangParser#mulDiv.
+    def visitMulDiv(self, ctx:PeachLangParser.MulDivContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PeachLangParser#mult.
+    def visitMult(self, ctx:PeachLangParser.MultContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PeachLangParser#div.
+    def visitDiv(self, ctx:PeachLangParser.DivContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PeachLangParser#literal.
+    def visitLiteral(self, ctx:PeachLangParser.LiteralContext):
         return self.visitChildren(ctx)
 
 
@@ -34,8 +59,8 @@ class PeachLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PeachLangParser#mulDiv.
-    def visitMulDiv(self, ctx:PeachLangParser.MulDivContext):
+    # Visit a parse tree produced by PeachLangParser#paren.
+    def visitParen(self, ctx:PeachLangParser.ParenContext):
         return self.visitChildren(ctx)
 
 

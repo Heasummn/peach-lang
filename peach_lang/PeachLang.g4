@@ -4,17 +4,29 @@ options {
     language = Python3;
 }
 
-prog: line+ ;
+prog: line+
+    ;
 
-line:
-      expr NEWLINE  # printExpr
+line
+    : expr NEWLINE  # printExpr
     | NEWLINE       # empty
     ;
 
-expr:
-        left=expr op=('*'|'/') right=expr # mulDiv
-    |   left=expr op=('+'|'-') right=expr # addSub
-    |   INT     # int
+expr
+    : left=mulDivExpr '+' right=expr    # add
+    | left=mulDivExpr '-' right=expr    # sub
+    | mulDivExpr                        # mulDiv
+    ;
+
+mulDivExpr
+    : left=atom '*' right=mulDivExpr    # mult
+    | left=atom '/' right=mulDivExpr    # div
+    | atom                              # literal
+    ;
+
+atom
+    : INT           # int
+    | '(' expr ')'   # paren
     ;
 
 NEWLINE: '\r'? '\n';
